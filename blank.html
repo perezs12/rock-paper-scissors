@@ -36,16 +36,18 @@ function singleRound(playerSelection, computerSelection) {
     }
     
 }
-//test singleRound code
-const playerSelection = 'rock'
-const computerSelection = 'scissors'
-console.log(singleRound(playerSelection, computerSelection))
 
 
-    
-    
-    
-
+//function that replays the game 5 times
+function game() {
+    for(i = 0; i <5; i++) {
+        singleRound();
+        let playerSelection = prompt('Enter your choice: ').toLowerCase();
+        let computerSelection = computerPlay();
+        console.log(singleRound(playerSelection, computerSelection));
+    }
+}
+game();
 
 </script>
 </html>
